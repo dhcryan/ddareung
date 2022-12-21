@@ -1,7 +1,8 @@
-import zipfile_deflate64 as zipfile
+# import zipfile_deflate64 as zipfile
+import zipfile
 import os
-extract_path='/home/dhc4003/ddareung/data'
-zipfile.ZipFile('seoul_bike18_22.zip').extractall(path=extract_path)
+extract_path='/home/dhc4003/ddareung/weather'
+zipfile.ZipFile('weather.zip').extractall(path=extract_path)
 
 # import zipfile
 # import os
