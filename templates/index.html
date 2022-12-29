@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="main.js"></script>
+        <!-- CSS -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+        />
+
+        <!-- 테마 -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+        />
+
+        <!-- 자바스크립트 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                height: 1000vh;
+            }
+            .title {
+                text-align: right;
+                padding-right: 40px;
+            }
+            .input-box {
+                position: fixed;
+                left: 20px;
+                top: 20px;
+                width: 300px;
+                border: 3px solid #415363;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                background: rgb(0, 160, 90, .9);
+                border-radius: 20px;
+                padding: 20px;
+                width: 300px;
+                height: 200px;
+            }
+            .search_box{
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+            
+            }
+
+            .btn_box{
+                display: flex;
+                justify-content: flex-end;
+            }
+            .slidecontainer {
+                position: fixed;
+                bottom: 30px;
+                width: 80%;
+                margin: 0 auto;
+            }
+            
+            /* .slider {
+                -webkit-appearance: none;
+                width: 100%;
+                height: 15px;
+                border-radius: 5px;  
+                background: #d3d3d3;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+            } */
+            /* .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%; 
+                background: #04AA6D;
+                cursor: pointer;
+            } */
+            /* .slider::-moz-range-thumb {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background: #04AA6D;
+                cursor: pointer;
+            } */
+            input[type=range] {
+                -webkit-appearance: none; 
+                width: 100%; 
+                height: 6px;
+                background: #d5d4d3; 
+                cursor: pointer;
+                border-radius: 0; /* iOS */
+                transition: background 450ms ease-in;
+            }
+
+            input[type=range]:focus {
+                outline: none; 
+            }
+
+            input[type=range]::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                width: 12px;
+                height: 12px;
+                background: #fff;
+                border: 1px solid dodgerblue;
+                border-radius:50%;
+                cursor: pointer;
+            }
+            input[type=range]::-moz-range-thumb{
+                -webkit-appearance: none;
+                width:10px;
+                height:10px;
+                background: #fff;
+                border: 1px solid dodgerblue;
+                border-radius:50%;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body class="p-4">
+        <h1 class="title">따릉이 프로젝트</h1>
+        {% if  data %}
+            <h2> {{ data }} </h2>
+        {% endif %}
+    
+        <div class="input-box">
+            <form action="\" method="get">
+                <div class="search_box">
+                    <label for="keyword1">출발지</label>
+                    <input type="text" name="keyword1" id="keyword1">
+                    <label for="keyword2">도착지</label>
+                    <input type="text" name="keyword2" id="keyword2">
+                </div>
+                <div class="btn_box">
+                    <button type="submit" class="btn btn-primary" >확인</button>
+                </div>
+            </form>
+            
+            
+            <div class="input-group-append">
+        </div>
+        <div class="slidecontainer">
+            시간: 4
+            <div class="range">
+                <input class="slider" type="range" value="0" min="0" max="24" step="1" list="number" />
+                <datalist class="range__list" id="number">
+                    <option class="range__opt opt0">0</option> 
+                    <option class="range__opt">0</option> 
+                    <option class="range__opt">6</option> 
+                    <option class="range__opt">12</option> 
+                    <option class="range__opt">18</option> 
+                    <option class="range__opt">24</option> 
+                </datalist>
+            </div>
+        </div>
+    </body>
+</html>
