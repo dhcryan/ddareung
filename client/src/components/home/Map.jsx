@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-// import parkData from "../../data/station.json";
+import sampleData from "../../data/data.json";
 
 const Map = () => {
     const position = [37.5, 127.0];
-
+    console.log(sampleData);
     return (
         <div id="map">
             <MapContainer
@@ -23,6 +23,24 @@ const Map = () => {
                         </span>
                     </Popup>
                 </Marker>
+
+                {sampleData.map((data) => {
+                    return (
+                        <Marker
+                            key={data.stationName}
+                            position={[
+                                data.stationLatitude,
+                                data.stationLongitude,
+                            ]}
+                        >
+                            <Popup>
+                                <span>
+                                    {data.stationName} <br /> {data.stationId}
+                                </span>
+                            </Popup>
+                        </Marker>
+                    );
+                })}
             </MapContainer>
         </div>
     );

@@ -61,7 +61,7 @@ function valuetext(value) {
 }
 
 const MySlider = (props) => {
-    const [value, setValue] = React.useState(7);
+    const [value, setValue] = React.useState(10);
 
     const sendTimelineValue = (value) => {
         props.getTimelineValue(value);
@@ -79,7 +79,7 @@ const MySlider = (props) => {
     return (
         <PrettoSlider
             aria-label="Timeline"
-            defaultValue={7}
+            defaultValue={10}
             getAriaValueText={valuetext}
             valueLabelDisplay="auto"
             step={1}
