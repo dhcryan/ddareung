@@ -1,7 +1,7 @@
 # ddareung
 
 ## 서울시 따릉이 적자문제 해결 프로젝트
-
+## jupyter내용 확인: https://nbviewer.org/github/dhcryan/ddareung/blob/master/module/seoul_bike.ipynb
 
 
 
