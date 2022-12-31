@@ -2,4 +2,6 @@
 data/
 seoulbike/
 seoul_bike/
-main.ipynb
+main.ipynbs
+seoul*.csv
+venv/
