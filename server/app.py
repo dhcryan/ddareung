@@ -37,7 +37,7 @@ def postStationData():
     # POST 요청을 받아서 처리한다
     data = request.get_json()
     print(data)
-    return data 
+    return data
 
 
 if __name__ == '__main__':          # 메인 함수

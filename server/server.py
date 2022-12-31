@@ -4,9 +4,8 @@ from flask import Flask, render_template, request, jsonify
 from flask.json import JSONEncoder
 import pandas as pd
 import os
-from page_renderer import PageRenderer
-from bike_dataset import build_df
 import mysql.connector
+from flask_cors import CORS
 
 mydb = mysql.connector.connect(
     host="localhost",
@@ -17,20 +16,28 @@ mydb = mysql.connector.connect(
 
 mc = mydb.cursor()
 app = Flask(__name__)
+CORS(app, resources={
+        r"/*": { "origins": "http://localhost:3000" }},
+        supports_credentials=True)   
 cur_path = os.path.curdir
 dataset_path = os.path.join(cur_path, 'Dataset')
 
 ## 시간 오래 걸림
 
-@app.route('/', methods=['GET'])
+@app.route('/search', methods=['POST'])
 def map():
+    data = request.get_json(force=True)
+    print(data)
+
 
     # 사용자로부터 입력받을 parameters
-    depart = '2266'
+    depart = data['fromStation']
     #depart = request.args.get('depart')
-    dest = '103'
+    dest = data['toStation']
     #dest = request.args.get('dest')
-    search_time = '2022-06-01 18:42:30'
+    timeline = data['timeline']
+
+    search_time = '2022-06-01 '+str(timeline)+':00:00'
     #initial_time = request.args.get('initial_time')
     initial_time = search_time[:-8]+'00:00:00'
 
