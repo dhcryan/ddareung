@@ -32,6 +32,14 @@ def users():
     return {"members": [{ "id" : 1, "name" : "yerin" },
     					{ "id" : 2, "name" : "dalkong" }]}
 
+@app.route("/search", methods=["POST"])
+def postStationData():
+    # POST 요청을 받아서 처리한다
+    data = request.get_json()
+    print(data)
+    return data 
+
+
 if __name__ == '__main__':          # 메인 함수
     app.run(debug=True)                       # 실행
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { styled } from "@mui/material/styles";
 import Slider from "@mui/material/Slider";
 
@@ -60,7 +60,22 @@ function valuetext(value) {
     return `${value}h`;
 }
 
-const MySlider = () => {
+const MySlider = (props) => {
+    const [value, setValue] = React.useState(7);
+
+    const sendTimelineValue = (value) => {
+        props.getTimelineValue(value);
+    };
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+        sendTimelineValue(newValue);
+    };
+
+    // useEffect(() => {
+    //     console.log(value);
+    // }, [value]);
+
     return (
         <PrettoSlider
             aria-label="Timeline"
@@ -72,6 +87,7 @@ const MySlider = () => {
             min={0}
             max={24}
             style={{ width: "90%" }}
+            onChange={handleChange}
         />
     );
 };

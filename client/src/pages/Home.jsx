@@ -3,7 +3,7 @@ import axios from "axios";
 
 import Maps from "../components/home/Map";
 import InputBox from "../components/home/InputBox";
-import MySlider from "../components/home/MySlider";
+// import MySlider from "../components/home/MySlider";
 
 import { Box, Typography } from "@mui/material";
 
@@ -49,7 +49,7 @@ function Home() {
                 }}
             >
                 <InputBox />
-                <Box
+                {/* <Box
                     sx={{
                         marginTop: "20px",
                         background: "rgb(255,255,255,0.9)",
@@ -59,7 +59,7 @@ function Home() {
                     }}
                 >
                     <MySlider />
-                </Box>
+                </Box> */}
             </Box>
         </div>
     );
