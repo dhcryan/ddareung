@@ -6,6 +6,7 @@ import pandas as pd
 import os
 import mysql.connector
 from flask_cors import CORS
+import json
 
 mydb = mysql.connector.connect(
     host="localhost",
@@ -119,18 +120,14 @@ def map():
     print(dest_group)
     print("======================")
     
-    result = {
-        "departure": departure.to_json(),
-        "departure_group": depart_group.to_json(),
-        "destination": destination.to_json(),
-        "destination_group": dest_group.to_json()
-    }
+    df_dict = {'departure': departure, 'departure_group': depart_group, 'destination': destination, 'destination_group':dest_group}
+    json_strings = {k: df.to_json(force_ascii=False, orient='table', indent=4) for k, df in df_dict.items()}
 
-    print(result)
+    with open('data.json', 'w', encoding='utf-8') as f:
+        for k, s in json_strings.items():
+            f.write(k+': '+s+'\n')
     
-    return jsonify({
-        'result': result
-    })
+    return jsonify(json_strings)
 
 
 if __name__ == '__main__':
