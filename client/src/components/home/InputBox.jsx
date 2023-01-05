@@ -2,19 +2,12 @@ import React, { useState } from "react";
 import axios from "../../api/axios";
 import MySlider from "./MySlider";
 
-import {
-    Box,
-    Select,
-    TextField,
-    Typography,
-    MenuItem,
-    Button,
-} from "@mui/material";
+import { Box, TextField, Button } from "@mui/material";
 
 const InputBox = () => {
-    const [fromStation, setFromStation] = React.useState(-1);
-    const [toStation, setToStation] = React.useState(-1);
-    const [timeline, setTimeline] = React.useState(7);
+    const [fromStation, setFromStation] = useState(-1);
+    const [toStation, setToStation] = useState(-1);
+    const [timeline, setTimeline] = useState(7);
 
     const getTimelineValue = (value) => {
         setTimeline(value);
@@ -63,8 +56,6 @@ const InputBox = () => {
                     justifyContent: "space-around",
                     background: "rgb(0, 160, 90, .9)",
                     borderRadius: "20px",
-                    padding: "20px",
-                    width: "300px",
                     height: "220px",
                     boxSizing: "border-box",
                 }}

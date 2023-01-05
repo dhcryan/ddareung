@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import Slider from "@mui/material/Slider";
 
@@ -61,7 +61,7 @@ function valuetext(value) {
 }
 
 const MySlider = (props) => {
-    const [value, setValue] = React.useState(10);
+    const [value, setValue] = useState(10);
 
     const sendTimelineValue = (value) => {
         props.getTimelineValue(value);

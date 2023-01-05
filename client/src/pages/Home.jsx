@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useEffect } from "react";
 import axios from "axios";
 
 import MyMap from "../components/home/MyMap";
@@ -10,14 +10,14 @@ import { Box, Typography } from "@mui/material";
 axios.defaults.withCredentials = true;
 
 function Home() {
-    const [data, setData] = useState([{}]);
+    // const [data, setData] = useState([{}]);
 
     useEffect(() => {
         axios
             .get("http://localhost:5000/users")
             .then((response) => {
+                // setData(response.data);
                 console.log(response.data);
-                setData(response.data);
             })
             .catch((err) => console.log(err));
     }, []);

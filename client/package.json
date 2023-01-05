@@ -13,6 +13,7 @@
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
         "axios": "^1.2.2",
+        "gh-pages": "^4.0.0",
         "leaflet": "^1.9.3",
         "leaflet.awesome-markers": "^2.0.5",
         "react": "^18.2.0",
@@ -20,13 +21,15 @@
         "react-leaflet": "^4.2.0",
         "react-router-dom": "^6.6.1",
         "react-scripts": "5.0.1",
+        "serve": "^14.1.2",
         "web-vitals": "^2.1.4"
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
@@ -45,5 +48,6 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    }
+    },
+    "homepage": "http://dhcryan.github.io/ddareung/"
 }

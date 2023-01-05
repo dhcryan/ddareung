@@ -9,13 +9,12 @@ import {
     CircleMarker,
 } from "react-leaflet";
 import sampleData from "../../data/data.json";
-import sampleData2 from "../../data/data2.json";
+// import sampleData2 from "../../data/data2.json";
 
-import { L } from "leaflet";
-import { faBicycle } from "@fortawesome/free-solid-svg-icons";
+// import { L } from "leaflet";
+// import { faBicycle } from "@fortawesome/free-solid-svg-icons";
 
-const fillBlueOptions = { fillColor: "blue" };
-const blackOptions = { color: "black" };
+// const fillBlueOptions = { fillColor: "blue" };
 const purpleOptions = { color: "purple" };
 const limeOptions = { color: "lime", fillColor: "rgb(100,100,100,0.8)" };
 const redOptions = { color: "red" };
