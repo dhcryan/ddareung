@@ -1,17 +1,17 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Subpage from "./pages/SubPage";
 
 const Router = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/subpage" element={<Subpage />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 };
 
