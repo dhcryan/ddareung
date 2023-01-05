@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 
-import Maps from "../components/home/Map";
+import MyMap from "../components/home/MyMap";
 import InputBox from "../components/home/InputBox";
 // import MySlider from "../components/home/MySlider";
 
@@ -38,7 +38,7 @@ function Home() {
             >
                 따릉이 프로젝트
             </Typography>
-            <Maps></Maps>
+            <MyMap></MyMap>
             <Box
                 sx={{
                     position: "fixed",

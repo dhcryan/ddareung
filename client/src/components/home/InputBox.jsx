@@ -18,7 +18,7 @@ const InputBox = () => {
 
     const getTimelineValue = (value) => {
         setTimeline(value);
-        console.log(timeline);
+        // console.log(timeline);
     };
 
     const handleFromStation = (e) => {
@@ -105,7 +105,7 @@ const InputBox = () => {
                     >
                         <TextField
                             id="filled-basic"
-                            label="도착 - 반납소"
+                            label="도착 - 대여소"
                             variant="outlined"
                             name="keyword2"
                             style={{ width: "100%" }}
@@ -137,7 +137,7 @@ const InputBox = () => {
                     marginTop: "20px",
                     background: "rgb(255,255,255,0.9)",
                     width: "300px",
-                    height: "100px",
+                    height: "150px",
                     paddingTop: "20px",
                 }}
             >

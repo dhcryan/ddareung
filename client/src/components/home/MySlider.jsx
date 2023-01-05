@@ -77,18 +77,21 @@ const MySlider = (props) => {
     // }, [value]);
 
     return (
-        <PrettoSlider
-            aria-label="Timeline"
-            defaultValue={10}
-            getAriaValueText={valuetext}
-            valueLabelDisplay="auto"
-            step={1}
-            marks={marks}
-            min={0}
-            max={24}
-            style={{ width: "90%" }}
-            onChange={handleChange}
-        />
+        <>
+            <PrettoSlider
+                aria-label="Timeline"
+                defaultValue={10}
+                getAriaValueText={valuetext}
+                valueLabelDisplay="auto"
+                step={1}
+                marks={marks}
+                min={0}
+                max={24}
+                style={{ width: "90%" }}
+                onChange={handleChange}
+            />
+            <h2>{value}시</h2>
+        </>
     );
 };
 
