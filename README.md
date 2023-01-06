@@ -10,6 +10,9 @@
 
 
 ## 결과물 소개
+
+[githubpage 페이지 샘플데이터 ](https://dhcryan.github.io/ddareung/)
+
 [Notion 설명 페이지](https://chokoty.notion.site/ed4142512b38437696bc1dd0cc746c28)
 
 **주제**
